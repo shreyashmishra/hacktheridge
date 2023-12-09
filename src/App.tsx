@@ -6,7 +6,9 @@ import Home from "./pages/Home/Home";
 import Map from "./pages/Map/Map";
 import Search from "./pages/Search/Search";
 import Store from "./pages/Store/Store";
+import Recipe from "./pages/Recipe/Recipe";
 import { AppContextProvider } from "./contexts/AppContext";
+import MyCart from "./pages/MyCart/MyCart";
 import Success from "./pages/Success/Success";
 
 function App() {
@@ -32,7 +34,8 @@ function App() {
                                 path="/store/:query"
                                 element={<Store />}
                             ></Route>
-                           
+                            <Route path="/cart" element={<MyCart />} />
+                            <Route path="/recipe" element={<Recipe />} />
                             <Route path="/success" element={<Success />} />
                         </Routes>
                     </div>
