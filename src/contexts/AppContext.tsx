@@ -144,23 +144,23 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
         },
         {
             name: "Pizza Dough",
-            image: "https://i.stack.imgur.com/sHZwp.jpg",
+            image: "https://static01.nyt.com/images/2018/01/18/dining/pizzadough-2/pizzadough-2-threeByTwoMediumAt2X-v2.jpg",
             left: 4,
             storeName: "Big Bite Pizza",
-            storeIcon: "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-1/305482076_749346869835000_3141189432076105167_n.png?stp=dst-png_p200x200&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=tQVJenhu8y8AX8YyLVZ&_nc_ht=scontent-yyz1-1.xx&oh=00_AfCI3lk7nvvJ83MiemFzBuhF5btYeYkdM57Fok-CjDJU1g&oe=652FFCB5",
+            storeIcon: "https://bigbitepizza.toeat.ca/sitedata/images/logo.png?1",
             pickupTime: "9am-2pm",
             cost: "$1.03",
-            location: [43.470819418177655, -80.5933605143783]
+            location: [43.48973379201621, -79.70778903042894]
         },
         {
             name: "Fried Chicken",
             image: "https://media-cdn.tripadvisor.com/media/photo-s/0e/d0/d0/53/overcooked-fried-chicken.jpg",
             left: 4,
             storeName: "Kentucky Fried Chicken",
-            storeIcon: "https://upload.wikimedia.org/wikipedia/en/thumb/5/57/KFC_logo-image.svg/1200px-KFC_logo-image.svg.png",
+            storeIcon: "https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/2048px-KFC_logo.svg.png",
             pickupTime: "10am-1pm",
-            cost: "$2.04",
-            location: [36.95984861835326, -84.09387789559345]
+            cost: "$2.34",
+            location: [43.48860548502764, -79.71883632870107]
         },
         {
             name: "ดาร์ธ เวเดอร์กินสุนัขของฉัน",
@@ -227,7 +227,7 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
             left: 2,
             storeName: "Tim Hortons",
             storeIcon:
-                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAARVBMVEVHcEwBiD4BiD0BiT8BiT4BiT4AiT4BiT4BiT4AiD4BiT0AiD8AhECmwCAlkzfb1w/s3wVJnTKHtiQKkTf/6ADI0BJzqi6WXopEAAAADHRSTlMAIE+ZxvD/nOIUh0VNIhMBAAABEklEQVR4AWSS4RKEIAiEtZKsw1TF3v9RT2+OoPp+OeO6sIgR7DQvDsAt82TNG7t6uPDrU7Lt8GDfbvceXnil+DhgEIFxn+u93EMIhyi2lz9CTAcC3qvsYp9DSuWoJXOnv3zA5ESptUhEJ3uMtCu/7/eUAWtQgrUbeBY0ooLjEETgrZmABUQUEAYigMnMfKzUKSMBnhmY2SzA0KBllJidxThQPQziWUFwBhg86U+ryoIFnPNHykrglOIo7IFSYgEFQok0QGlyBiYrlyox1aBOvNKoQcmo/5WxqB68VZ9FFA7sRJViVd+NI1/IpRFJSqsWBluuI0MsMur9vnLIK/dc7O9wJ1qCyZ5wxiGc9QhnXoLZHwCtzx1gqdwaTQAAAABJRU5ErkJggg==",
+                "https://fiu-original.b-cdn.net/fontsinuse.com/use-images/168/168197/168197.png?filename=Tim_Hortons_Maple_Leaf.png",
             pickupTime: "6pm-8pm",
             cost: "$2.50",
             location: [43.483981, -79.723087],

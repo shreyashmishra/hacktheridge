@@ -1,3 +1,4 @@
+// Importing necessary modules and components
 import { FunctionComponent, CSSProperties } from "react";
 import { Product } from "../../types/types";
 import { IconMapPin, IconShoppingCartPlus } from "@tabler/icons-react";
@@ -6,19 +7,23 @@ import "./Card.scss";
 import { useAppContext } from "../../hooks/useAppContext";
 import { ToastContainer, toast } from 'react-toast';
 
+// Defining the properties for the Card component
 interface CardProps {
     product: Product;
 }
 
-
-
+// Defining the Card component
 const Card: FunctionComponent<CardProps> = ({ product }) => {
-    const { addToCart, setProducts, products } = useAppContext()
+    // Using App context for managing state
+    const { addToCart, setProducts, products } = useAppContext();
+
+    // Rendering the Card component
     return (
         <div
             className="Card flex-shrink-0 rounded-[40px] bg-[#D9D9D9] w-80 h-64 overflow-clip relative"
             style={{ "--image": `url('${product.image}')` } as CSSProperties}
         >
+            {/* Top section of the card */}
             <div className="top h-1/2 flex flex-col justify-end items-start p-4 bg-center">
                 <h3 className="text-white font-semibold text-2xl">
                     {product.name}
@@ -33,23 +38,29 @@ const Card: FunctionComponent<CardProps> = ({ product }) => {
                 >
                     {product.left} left
                 </div>
+                {/* Add to cart button */}
                 <div
                     className="absolute right-4 top-4 h-8 w-8 rounded-full bg-green-400 hover:bg-green-500 transition flex items-center justify-center cursor-pointer"
                     onClick={() => {
-                        const i = products.indexOf(product)
+                        const i = products.indexOf(product);
 
                         addToCart(product);
-                        let productsCopy = [...products]
-                        productsCopy[i].left -= 1
+                        let productsCopy = [...products];
+                        productsCopy[i].left -= 1;
+                        
                         // if (productsCopy[i].left <= 0) productsCopy.splice(i, 1)
 
-                        setProducts(productsCopy)
-                        toast.success(`Added ${product.name} to cart.`)
-                    }}>
+                        setProducts(productsCopy);
+                        toast.success(`Added ${product.name} to cart.`);
+                    }}
+                >
                     <IconShoppingCartPlus size={24}/>
                 </div>
             </div>
+
+            {/* Bottom section of the card */}
             <div className="h-1/2 flex flex-col justify-evenly p-4">
+                {/* Store information */}
                 <div className="flex gap-4 items-center font-bold">
                     <img
                         src={product.storeIcon}
@@ -57,12 +68,16 @@ const Card: FunctionComponent<CardProps> = ({ product }) => {
                     />
                     <h4>{product.storeName}</h4>
                 </div>
+
+                {/* Product details */}
                 <div className="flex flex-col justify-start">
                     <p className="text-left">
                         Pick up: today at {product.pickupTime}
                     </p>
                     <p className="text-left">Cost: {product.cost}</p>
                 </div>
+
+                {/* Distance and Map link */}
                 <div className="absolute bottom-4 right-6 text-xs text-[#818181]">
                     <span className="mr-1">
                         {product.DistanceMatrixResponseElement?.status ==
@@ -86,12 +101,14 @@ const Card: FunctionComponent<CardProps> = ({ product }) => {
                     </Link>
                 </div>
             </div>
+
+            {/* Toast container for notifications */}
             <ToastContainer
                 position="bottom-right"
-
             />
         </div>
     );
 };
 
+// Exporting the Card component
 export default Card;

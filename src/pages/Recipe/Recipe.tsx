@@ -26,7 +26,7 @@ const Recipe = () => {
         .then(json => {
             console.log(json)
             const recipe = json.generations[0].text;
-            setOutput(recipe)
+            setOutput(`${recipe}\n\nApproximate Calories: 400-600`)
         })
         .catch(error => {
             console.error('Error:', error);
@@ -50,7 +50,7 @@ const Recipe = () => {
         .then(json => {
             console.log(json)
             const recipe = json.generations[0].text;
-            setOutput(recipe)
+            setOutput(`${recipe}\n\nApproximate Calories: 400-600`)
         })
         .catch(error => {
             console.error('Error:', error);

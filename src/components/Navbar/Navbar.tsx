@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import { NavLink, Link } from "react-router-dom";
 import budgetbites from "../../assets/budgetbites.png";
 import "./Navbar.scss";
-import { IconMap, IconChefHat, IconShoppingCart } from "@tabler/icons-react";
+import { IconMap, IconChefHat, IconShoppingCart, IconBook } from "@tabler/icons-react";
 
 const Navbar: FunctionComponent = () => {
     return (
@@ -11,12 +11,13 @@ const Navbar: FunctionComponent = () => {
                 <div className="flex items-center justify-center mb-8">
                     <img
                         src={budgetbites}
-                        className="w-[60px] h-[60px] rounded-full object-cover inline"
+                        className="w-[100px] h-[100px] rounded-full object-cover inline"
                     />
                     <h1 className="text-white text-2xl inline"> WasteEDU</h1>
                 </div>
             </Link>
             <NavLink className="text-white flex gap-3 text-lg" to="/lessons">
+                <IconBook />
                 <span className="block">Lessons</span>
             </NavLink>
             <NavLink className="text-white flex gap-3 text-lg" to="/map">
