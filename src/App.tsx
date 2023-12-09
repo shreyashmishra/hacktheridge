@@ -10,6 +10,7 @@ import Recipe from "./pages/Recipe/Recipe";
 import { AppContextProvider } from "./contexts/AppContext";
 import MyCart from "./pages/MyCart/MyCart";
 import Success from "./pages/Success/Success";
+//import Lessons from "./pages/Lessons/Lessons";
 
 function App() {
     return (
@@ -37,6 +38,7 @@ function App() {
                             <Route path="/cart" element={<MyCart />} />
                             <Route path="/recipe" element={<Recipe />} />
                             <Route path="/success" element={<Success />} />
+                           
                         </Routes>
                     </div>
                 </div>

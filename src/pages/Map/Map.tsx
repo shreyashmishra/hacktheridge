@@ -9,11 +9,12 @@ function Map() {
         <div className="page p-0">
             <MapComponent
                 {...{
-                    lat: lat ? parseFloat(lat) : 43.78709226329809,
-                    long: long ? parseFloat(long) : -79.18961737715792,
+                    lat: lat ? parseFloat(lat) : 43.48897815074335,
+                    long: long ? parseFloat(long) : -79.69918168264917,
                 }}
             />
         </div>
+       
     );
 }
 

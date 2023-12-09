@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 import Card from "../../components/Card/Card";
 import { useAppContext } from "../../hooks/useAppContext";
+import Button from "../../components/Button/Button";
 import "./Home.scss";
 
 
@@ -43,6 +44,10 @@ const Home: FunctionComponent = () => {
                 {byDuration.filter((product) => product.left > 0).map((product, i) => (
                     <Card {...{ product, key: i }} />
                 ))}
+            </div>
+            {/**/}
+            <div className="custom-container">
+                <Button label="Add Your Own" />
             </div>
         </div>
     );

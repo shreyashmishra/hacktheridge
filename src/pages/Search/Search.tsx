@@ -1,7 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
 import { useAppContext } from "../../hooks/useAppContext";
-import { Product } from "../../types/types";
 import Card from "../../components/Card/Card";
 
 const Search = () => {
@@ -11,29 +10,31 @@ const Search = () => {
 
     if (!query) {
         navigate("/");
-        return <></>;
+        return null;
     }
 
     const fuse = new Fuse(products, { keys: ["name", "storeName"] });
-    const searchedProducts: Product[] = fuse
+    const searchedProducts = fuse
         .search(query)
-        .map((searched) => searched.item)
-        .filter((product) => product.left > 0);
+        .map(({ item }) => item)
+        .filter(({ left }) => left > 0);
+
+    if (!searchedProducts.length) {
+        return (
+            <div>
+                <h2>No results found</h2>
+            </div>
+        );
+    }
 
     return (
         <div className="page">
             <h2 className="text-[2rem] mb-4">Search results for "{query}"</h2>
-            {searchedProducts.length ? (
-                <div className="card-container">
-                    {searchedProducts.map((product, i) => (
-                        <Card {...{ product, key: i }} />
-                    ))}
-                </div>
-            ) : (
-                <div>
-                    <h2>No results found</h2>
-                </div>
-            )}
+            <div className="card-container">
+                {searchedProducts.map((product, i) => (
+                    <Card {...{ product, key: i }} />
+                ))}
+            </div>
         </div>
     );
 };

@@ -30,7 +30,7 @@ const Header: FunctionComponent = () => {
     }, [Geocoder, location, setCity]);
 
     return (
-        <header className="bg-[#0E694A] w-full py-5 px-10 items-center grid grid-flow-column">
+        <header className="bg-[#0b0d29] w-full py-5 px-10 items-center grid grid-flow-column">
             <div className="text-[#D9D9D9] text-left justify-self-start">
                 {city}
             </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAppContext } from "../../hooks/useAppContext";
-
+import { IconMap, IconChefHat, IconShoppingCart } from "@tabler/icons-react";
 
 const Recipe = () => {
     const [input, setInput] = useState('')
@@ -69,9 +69,8 @@ const Recipe = () => {
                     <button className="block bg-blue-600 hover:bg-blue-500 transition py-2 px-4 rounded-md text-xl text-gray-50" onClick={() => generateRecipeThroughInput(input)}>Generate Recipe</button>
                 </> : <>
                     <button
-                        className="block bg-blue-600 hover:bg-blue-500 disabled:bg-gray-400 cursor-not-allowed transition py-2 px-4 rounded-md text-xl text-gray-50"
+                        className="block bg-blue-600 hover:bg-blue-500 transition py-2 px-4 rounded-md text-xl text-gray-50"
                         onClick={() => setIsGeneratingThroughInput(true)}
-                        disabled={cart.length === 0}
                     >Generate Recipe from Input</button>
                 </>}
                 <p>{output}</p>

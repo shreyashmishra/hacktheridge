@@ -26,7 +26,7 @@ export const AppContext = createContext<AppContextValue | null>(null);
 
 export const AppContextProvider = ({ children }: { children: ReactNode }) => {
     const [location, setLocation] = useState<Coordinate>([
-        43.78668240105278, -79.18963816316345,
+        43.48897815074335, -79.69918168264917,
     ]);
 
     const service = new google.maps.DistanceMatrixService();
@@ -45,23 +45,25 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
             name: "Muffins",
             image: "https://cdn.discordapp.com/attachments/1162120421026578522/1163135343869042688/image.png?ex=653e7933&is=652c0433&hm=68dd1ce6cf28d5f2f1b8e55aea5c0775867d2efed7b54beaa82fb9c2bd7e2640&",
             left: 2,
-            storeName: "Hack the Valley",
+            storeName: "Hack the Ridge",
             storeIcon:
                 "https://cdn.discordapp.com/icons/1157000436503564430/9e7a4fcd2cdccac03ad9eb2e7dc175b6.webp?size=96",
             pickupTime: "6pm-9pm",
             cost: "$0.69",
-            location: [43.786736298196494, -79.18997273691392],
+            location: [43.52122534880629, 79.688214441330222],
+            //43.52122534880629, -79.68821444133022
         },
         {
             name: "Curry Sauce",
             image: "https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg?quality=90&resize=440,400",
             left: 2,
-            storeName: "Silver Spoon",
+            storeName: "Metro",
             storeIcon:
                 "https://silverspoononline.com/wp-content/uploads/2020/04/Logo.png",
             pickupTime: "6pm-8pm",
             cost: "$0.72",
-            location: [43.791962083132965, -79.25144371163064],
+            location: [43.48380122036387, -79.69494305308623],
+            //43.48380122036387, -79.69494305308623
         },
         {
             name: "Milk",
@@ -72,7 +74,8 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
                 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAUVBMVEVHcEw/WGnLmjXjrjxDW0b2tS+mlU38ujD8ujCKg037uTDiqzXeqDTztjT8uS/Inzv/uy/qsDTtrzD2tzLapDDpsDf+uy/Vq0Hysi7orTP3tS5RPCkhAAAAG3RSTlMABTU3Er0U3dAMxnBkprEo/px1eZpQ5xfGReX/NcVzAAAApklEQVR4Ab1RAwLAMAzcas7+/z9n23Vz4cX4YZgAboMIY7INUroNmozxFWl7Y9H+zQHjUjXutNW4V3LwYAvHBdXD8+ucA0fYg2WoI1EZx3FllkQ6HMcmoStUHchUiRvOcyaw9WRD8iKvCHRuAZ9DaZD0CQUpGkOhmzFZlkGqciTL3HBEQuJoWNnJmgSoJyT4ckIfkT7fJt4wN1p2q9lIiB3q0tT4YRQZhQaNlGZesQAAAABJRU5ErkJggg==",
             pickupTime: "3pm-5pm",
             cost: "$0.49",
-            location: [43.79823453032201, -79.2007036978067],
+            location: [43.482834102939115, -79.71847568960094],
+            //43.482834102939115, -79.71847568960094
         },
         {
             name: "Rotisserie Chicken",
@@ -94,18 +97,20 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
                 "https://cdn.discordapp.com/attachments/1162120421026578522/1162984791092760666/a.png?ex=653decfd&is=652b77fd&hm=d68c49e67d5ba89e694c3b4911f57f32884057a1d80bece6c12d49d318421848&",
             pickupTime: "3pm-5pm",
             cost: "$0.99",
-            location: [43.81011637266236, -79.27037412310364],
+            location: [43.48349228000922, -79.722115557726014],
+            //43.48349228000922, -79.72211555772601
         },
         {
-            name: "Chicken On The Rocks",
+            name: "Pho Combo",
             image: "https://i.redd.it/kxi5axqo9uo91.jpg",
             left: 1,
-            storeName: "Lazeez",
+            storeName: "Little Saigon",
             storeIcon:
-                "https://cdn.discordapp.com/attachments/1162120421026578522/1162991156683079681/lazeez.png?ex=653df2eb&is=652b7deb&hm=ea976f04bd06949d07e74121ba66aeba41994ee91420977134d33a382515f83d&",
+                "https://d1ralsognjng37.cloudfront.net/087ac1a5-e01a-4ed1-8eac-542bba658742.webp",
             pickupTime: "3pm-5pm",
             cost: "$4.99",
-            location: [43.78323022514291, -79.16968970436169],
+            location: [43.49765666261458, -79.70596973702345],
+            //43.49765666261458, -79.70596973702345
         }, 
         {
             name: "Peas",
@@ -167,6 +172,66 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
             pickupTime: "2pm-5:30pm",
             cost: "$3.43",
             location: [1.3167901136442113, 103.8983060507915],
+        },
+        {
+            name: "Pho Broth (Pork)",
+            image: "https://d1ralsognjng37.cloudfront.net/087ac1a5-e01a-4ed1-8eac-542bba658742.webp",
+            left: 2,
+            storeName: "Little Saigon",
+            storeIcon:
+                "https://d1ralsognjng37.cloudfront.net/087ac1a5-e01a-4ed1-8eac-542bba658742.webp",
+            pickupTime: "6pm-8pm",
+            cost: "$1.20",
+            location: [43.49765666261458, -79.70596973702345],
+            //43.48380122036387, -79.69494305308623
+        },
+        {
+            name: "Pepperoni Pizza Slice",
+            image: "https://storage.googleapis.com/phx2-uat-wordpress-uploads/1/2023/09/Stuffed-Crust-Pizza-National.jpg?cache_key=54",
+            left: 8,
+            storeName: "Pizza Pizza",
+            storeIcon:
+                "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIACAAIAMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAAABQYEA//EACkQAAIBAwMCBAcAAAAAAAAAAAECAwAEEQUSIRNBFBUxMgYiI1FhcrH/xAAXAQADAQAAAAAAAAAAAAAAAAABAgYD/8QAHBEAAgIDAQEAAAAAAAAAAAAAAQIDEQAEBRIh/9oADAMBAAIRAxEAPwDZRTjSIrZbJri4S0ObpYma7JCqm0s23B93HFMJYtJFvKll4BmaNOkt0HWVSRyzdz+oHrnmp6HnPKgYEfcqJuikTlPJ+ZL0VU3q6ZF1Hih01jFs3kh9rpgl8AcK5JGASTipy8RIrudIgekJH6ROeU3Hafzxjmk2dJ9cWTeaau8mwaArOulyJHqNmZpAsC3EbvvbCDBHJ7emeabx/EFv4YwXHmM25g7TiUCTO9WKqc5CfL9889qnaKEG7JAvlcM+lHO3p8pG+I4N11KPMXknkVyjsnTKjH09u4gA4wTgnFL9U1GK8txGr3srCdpQ90VJUEe0Y9Bn+UroppOhNIhQ1RxY+dDG4dbsZ//Z",
+            pickupTime: "6pm-8pm",
+            cost: "$1.09",
+            location: [43.49815128716817, -79.70665517301019],
+            //43.48380122036387, -79.69494305308623
+        },
+        {
+            name: "Tilapia Fish",
+            image: "https://worldfishcenter.org/sites/default/files/styles/900x6/public/images/bg/news/1111.jpg?itok=iJbSTpZX",
+            left: 2,
+            storeName: "Cynthia's Chinese Resturaunt",
+            storeIcon:
+                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAARVBMVEVHcEwBiD4BiD0BiT8BiT4BiT4AiT4BiT4BiT4AiD4BiT0AiD8AhECmwCAlkzfb1w/s3wVJnTKHtiQKkTf/6ADI0BJzqi6WXopEAAAADHRSTlMAIE+ZxvD/nOIUh0VNIhMBAAABEklEQVR4AWSS4RKEIAiEtZKsw1TF3v9RT2+OoPp+OeO6sIgR7DQvDsAt82TNG7t6uPDrU7Lt8GDfbvceXnil+DhgEIFxn+u93EMIhyi2lz9CTAcC3qvsYp9DSuWoJXOnv3zA5ESptUhEJ3uMtCu/7/eUAWtQgrUbeBY0ooLjEETgrZmABUQUEAYigMnMfKzUKSMBnhmY2SzA0KBllJidxThQPQziWUFwBhg86U+ryoIFnPNHykrglOIo7IFSYgEFQok0QGlyBiYrlyox1aBOvNKoQcmo/5WxqB68VZ9FFA7sRJViVd+NI1/IpRFJSqsWBluuI0MsMur9vnLIK/dc7O9wJ1qCyZ5wxiGc9QhnXoLZHwCtzx1gqdwaTQAAAABJRU5ErkJggg==",
+            pickupTime: "6pm-8pm",
+            cost: "$1.65",
+            location: [43.49815128716817, -79.70665517301019],
+            //43.48380122036387, -79.69494305308623
+        },
+        {
+            name: "Tilapia Fish",
+            image: "https://worldfishcenter.org/sites/default/files/styles/900x6/public/images/bg/news/1111.jpg?itok=iJbSTpZX",
+            left: 2,
+            storeName: "Food Basics",
+            storeIcon:
+            "https://cdn.discordapp.com/attachments/1162120421026578522/1162984791092760666/a.png?ex=653decfd&is=652b77fd&hm=d68c49e67d5ba89e694c3b4911f57f32884057a1d80bece6c12d49d318421848&",
+            pickupTime: "6pm-8pm",
+            cost: "$1.65",
+            location: [43.49815128716817, -79.70665517301019],
+            //43.48380122036387, -79.69494305308623
+        },
+        {
+            name: "Chocolate Dip Donut",
+            image: "https://timhortons.ph/upload/assets/8i4G0WlZshMNYHrGeuzPdaE1L6qnOtuDS9xV0sA2f5E00aOWhQ.jpg",
+            left: 2,
+            storeName: "Tim Hortons",
+            storeIcon:
+                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAARVBMVEVHcEwBiD4BiD0BiT8BiT4BiT4AiT4BiT4BiT4AiD4BiT0AiD8AhECmwCAlkzfb1w/s3wVJnTKHtiQKkTf/6ADI0BJzqi6WXopEAAAADHRSTlMAIE+ZxvD/nOIUh0VNIhMBAAABEklEQVR4AWSS4RKEIAiEtZKsw1TF3v9RT2+OoPp+OeO6sIgR7DQvDsAt82TNG7t6uPDrU7Lt8GDfbvceXnil+DhgEIFxn+u93EMIhyi2lz9CTAcC3qvsYp9DSuWoJXOnv3zA5ESptUhEJ3uMtCu/7/eUAWtQgrUbeBY0ooLjEETgrZmABUQUEAYigMnMfKzUKSMBnhmY2SzA0KBllJidxThQPQziWUFwBhg86U+ryoIFnPNHykrglOIo7IFSYgEFQok0QGlyBiYrlyox1aBOvNKoQcmo/5WxqB68VZ9FFA7sRJViVd+NI1/IpRFJSqsWBluuI0MsMur9vnLIK/dc7O9wJ1qCyZ5wxiGc9QhnXoLZHwCtzx1gqdwaTQAAAABJRU5ErkJggg==",
+            pickupTime: "6pm-8pm",
+            cost: "$2.50",
+            location: [43.483981, -79.723087],
+            //43.48380122036387, -79.69494305308623
         },
     ]);
 
