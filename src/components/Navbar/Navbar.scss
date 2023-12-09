@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    a:not(.home-link) {
+        padding: 0.5rem 2rem;
+        margin: 0.15rem 1rem;
+        border-radius: 500000rem;
+        transition-duration: 250ms;
+        text-align: left;
+        &:hover, &.active {
+            backdrop-filter: brightness(120%);
+        }
+    }
+}
