@@ -1,13 +1,44 @@
-.button-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .lesson-button {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    margin: 10px;
-  }
-  
+/* Lessons.css */
+
+body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FFFFFF; /* Navy color for background */
+}
+
+.lesson-header {
+  text-align: center;
+  padding: 20px;
+  color: #fff; /* White text color */
+}
+
+.box-group {
+  margin-top: -4%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+  gap: 20px; /* Adjust the gap between boxes */
+  width: 80%; /* Adjust the width of the box group */
+  max-width: 800px; /* Set a maximum width for larger screens */
+}
+
+.box {
+  text-align: center;
+  padding: 130px; /* Increase the padding for larger boxes */
+  padding-left: 250px;
+  padding-right: 250px;
+  margin-left: 7%;
+  margin-right: 50%;
+  background-color: #161a42; /* Slightly darker blue for boxes */
+  color: #fff; /* White text color */
+  text-decoration: none;  
+  border: none;
+  border-radius: 15px; /* Adjust the value to control the roundness of the corners */
+}
+
+.box:hover {
+  background-color: #3498db;
+}
