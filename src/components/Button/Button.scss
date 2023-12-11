@@ -1,72 +1,82 @@
+/* Styling for the customize button */
 .customize-button {
-    background-color: navy;
-    color: white;
-    border: none;
-    padding: 25px 25px;
-    margin-top: 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
+  background-color: navy; 
+  color: white;
+  border: none; 
+  padding: 25px 25px; 
+  margin-top: 25px; 
+  border-radius: 5px; 
+  cursor: pointer; /* Set cursor to pointer */
+  font-size: 16px; 
+}
 
+/* Styling for the customize modal */
 .customize-modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #1a3a5e; /* Navy blue */
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 40%; /* Adjust the width as needed */
-  }
-  
-  .customize-overlay {
-    background-color: rgba(173, 216, 230, 0.5); /* Light blue overlay */
-  }
-  
-  .modal-content {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .modal-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .modal-label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .modal-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff; /* White input background */
-    color: #333;
-  }
-  
-  .modal-buttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .final-button {
-    background-color: darkblue; /* Green button */
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    align-items: center;
-    display: center;
-    margin-left: 50px;
-  }
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); /* Center the modal */
+  background-color: #1a3a5e; 
+  color: #fff;
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  width: 40%; 
+}
 
-  .final-button1:hover {
-    background-color: lightblue;
-  }
+/* Styling for the overlay */
+.customize-overlay {
+  background-color: rgba(173, 216, 230, 0.5); /* Light blue overlay */
+}
+
+/* Styling for modal content */
+.modal-content {
+  max-width: 400px; 
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Styling for modal title */
+.modal-title {
+  font-size: 1.5rem; 
+  margin-bottom: 10px; 
+}
+
+/* Styling for modal label */
+.modal-label {
+  display: block; 
+  margin-bottom: 10px; 
+}
+
+/* Styling for modal input */
+.modal-input {
+  width: 100%;
+  padding: 8px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  background-color: #fff; 
+  color: #333; 
+}
+
+/* Styling for modal buttons */
+.modal-buttons {
+  margin-top: 20px; 
+  display: flex; 
+  justify-content: space-between; /* Space between items */
+}
+
+/* Styling for the final button */
+.final-button {
+  background-color: darkblue; 
+  color: #fff; 
+  border: none; 
+  padding: 10px 15px; 
+  border-radius: 4px;
+  align-items: center; 
+  display: center; 
+  margin-left: 50px; 
+}
+
+/* Hover effect for the final button */
+.final-button1:hover {
+  background-color: lightblue; /* Set background color to light blue on hover */
+}
